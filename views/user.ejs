@@ -1,0 +1,59 @@
+<%- include("header") %>
+
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="logo">
+      <h2>My Dashboard</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#" class="active">Overview</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Messages</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="content">
+    <header>
+      <h1>Welcome Back <%= user.fullname %></h1>
+      <p>Here’s an overview of your activity and details.</p>
+    </header>
+     
+    <section class="user-details">
+      <h2>User Details</h2>
+      <div class="details">
+       
+        <p><strong>Full Name:</strong> <%= user.fullname %></p>
+        <hr>
+        <p><strong>Username:</strong> <%= user.username %></p>
+        <hr>
+        <p><strong>Date of Birth:</strong> <%= user.dob %></p>
+        <hr>
+        <p><strong>Phone Number:</strong> <%= user.phone %></p>
+        <hr>
+        <p><strong>Email:</strong> <%= user.email %></p>
+      
+       
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="card">
+        <h3>Tasks Completed</h3>
+        <p>24</p>
+      </div>
+      <div class="card">
+        <h3>Messages</h3>
+        <p>5</p>
+      </div>
+      <div class="card">
+        <h3>Pending Tasks</h3>
+        <p>3</p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<%- include("footer") %>
